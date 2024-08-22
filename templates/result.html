@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaser Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Your Teaser is Ready</h1>
+        
+        <!-- Video Preview -->
+        <div class="text-center mt-4">
+            <video width="600" controls>
+                <source src="{{ url_for('static', filename='processed/teaser0.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Download Button -->
+        <div class="text-center mt-4">
+            <a href="{{ url_for('download_file') }}" class="btn btn-success">Download Teaser</a>
+        </div>
+    </div>
+</body>
+</html>
